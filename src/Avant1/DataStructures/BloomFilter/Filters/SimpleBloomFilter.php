@@ -1,9 +1,9 @@
 <?php
 
-namespace Avant1\DataStructures\BloomFilter;
+namespace Avant1\DataStructures\BloomFilter\Filters;
 
-use Avant1\DataStructures\BloomFilter;
-use Avant1\DataStructures\HashFunction;
+use Avant1\DataStructures\BloomFilter\BloomFilter;
+use Avant1\DataStructures\BloomFilter\HashFunction;
 
 class SimpleBloomFilter implements BloomFilter
 {

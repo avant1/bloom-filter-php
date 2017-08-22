@@ -1,10 +1,10 @@
 <?php
 
-namespace spec\Avant1\DataStructures\BloomFilter;
+namespace spec\Avant1\DataStructures\BloomFilter\Filters;
 
-use Avant1\DataStructures\BloomFilter;
-use Avant1\DataStructures\BloomFilter\SimpleBloomFilter;
-use Avant1\DataStructures\HashFunction\MurmurHashFunction;
+use Avant1\DataStructures\BloomFilter\BloomFilter;
+use Avant1\DataStructures\BloomFilter\Filters\SimpleBloomFilter;
+use Avant1\DataStructures\BloomFilter\HashFunction\MurmurHashFunction;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 

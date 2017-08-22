@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Avant1\DataStructures;
+namespace Avant1\DataStructures\BloomFilter;
 
 
 interface HashFunction

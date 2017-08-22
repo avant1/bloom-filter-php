@@ -8,7 +8,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Avant1\\": "src/Avant1"
+      "Avant1\\DataStructures\\BloomFilter\\": "src/Avant1/DataStructures/BloomFilter/"
     }
   },
   "require-dev": {

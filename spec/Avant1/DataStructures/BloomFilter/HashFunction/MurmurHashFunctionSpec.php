@@ -1,8 +1,8 @@
 <?php
 
-namespace spec\Avant1\DataStructures\HashFunction;
+namespace spec\Avant1\DataStructures\BloomFilter\HashFunction;
 
-use Avant1\DataStructures\HashFunction\MurmurHashFunction;
+use Avant1\DataStructures\BloomFilter\HashFunction\MurmurHashFunction;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
