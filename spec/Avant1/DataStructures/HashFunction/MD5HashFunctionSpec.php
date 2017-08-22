@@ -15,7 +15,7 @@ class MD5HashFunctionSpec extends ObjectBehavior
 
     function it_should_hash()
     {
-        $this->hash('potato')->shouldReturn('8ee2027983915ec78acc45027d874316');
+        $this->hash('potato')->shouldReturn(9223372036854775807);
     }
 
 }

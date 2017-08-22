@@ -9,9 +9,9 @@ use Avant1\DataStructures\HashFunction;
 
 class MurmurHashFunction implements HashFunction
 {
-    public function hash(string $input): string
+    public function hash(string $input): int
     {
-        return murmurhash3($input);
+        return (int)murmurhash3_int($input);
     }
 
 }

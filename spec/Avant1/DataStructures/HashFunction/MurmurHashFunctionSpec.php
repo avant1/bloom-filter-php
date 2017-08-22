@@ -15,7 +15,7 @@ class MurmurHashFunctionSpec extends ObjectBehavior
 
     function it_should_hash()
     {
-        $this->hash('potato')->shouldReturn('3im0mr3');
+        $this->hash('potato')->shouldReturn(3848297315);
     }
 
 }
