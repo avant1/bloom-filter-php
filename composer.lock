@@ -4,8 +4,52 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a8ee4e001a8770501dceec98e470aaa9",
-    "packages": [],
+    "content-hash": "5ca311e8a912d2daa8f74bc077f356d0",
+    "packages": [
+        {
+            "name": "lastguest/murmurhash",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lastguest/murmurhash-php.git",
+                "reference": "8eb06483456bc98f5adb7707d981a8ef6a065fa2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lastguest/murmurhash-php/zipball/8eb06483456bc98f5adb7707d981a8ef6a065fa2",
+                "reference": "8eb06483456bc98f5adb7707d981a8ef6a065fa2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=4.3"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "murmurhash3.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stefano Azzolini",
+                    "email": "lastguest@gmail.com",
+                    "homepage": "https://github.com/lastguest/murmurhash-php"
+                }
+            ],
+            "description": "MurmurHash3 Hash",
+            "homepage": "https://github.com/lastguest/murmurhash-php",
+            "keywords": [
+                "hash",
+                "hashing",
+                "murmur"
+            ],
+            "time": "2016-05-16T23:22:58+00:00"
+        }
+    ],
     "packages-dev": [
         {
             "name": "doctrine/instantiator",
@@ -1128,6 +1172,8 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=7.1"
+    },
     "platform-dev": []
 }
