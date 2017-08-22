@@ -1,19 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Avant1\DataStructures;
 
-class BloomFilter
+
+interface BloomFilter
 {
 
-    private $hash = [];
+    public function exists(string $id): bool;
 
-    public function exists(string $id): bool
-    {
-        return isset($this->hash[$id]);
-    }
+    public function add(string $id): void;
 
-    public function add(string $id): void
-    {
-        $this->hash[$id] = true;
-    }
+
 }

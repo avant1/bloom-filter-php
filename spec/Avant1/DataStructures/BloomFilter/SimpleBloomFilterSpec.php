@@ -1,15 +1,17 @@
 <?php
 
-namespace spec\Avant1\DataStructures;
+namespace spec\Avant1\DataStructures\BloomFilter;
 
 use Avant1\DataStructures\BloomFilter;
+use Avant1\DataStructures\BloomFilter\SimpleBloomFilter;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
-class BloomFilterSpec extends ObjectBehavior
+class SimpleBloomFilterSpec extends ObjectBehavior
 {
-    function it_is_initializable()
+    function it_should_be_bloom_filter()
     {
+        $this->shouldHaveType(SimpleBloomFilter::class);
         $this->shouldHaveType(BloomFilter::class);
     }
 
