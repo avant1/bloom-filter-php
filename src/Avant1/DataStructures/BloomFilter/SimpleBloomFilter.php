@@ -8,7 +8,7 @@ use Avant1\DataStructures\HashFunction;
 class SimpleBloomFilter implements BloomFilter
 {
 
-    private $hash = [];
+    private $hash;
 
     private $m;
     private $hashFunctions;
@@ -17,6 +17,8 @@ class SimpleBloomFilter implements BloomFilter
     {
         $this->m = $m;
         $this->hashFunctions = $hashFunctions;
+
+        $this->hash = new \SplFixedArray($m);
     }
 
     public function exists(string $id): bool
