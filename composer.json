@@ -1,0 +1,13 @@
+{
+  "name": "avant1/bloom-filter",
+  "description": "Bloom filter PHP implementation",
+  "type": "library",
+  "require": {},
+  "require-dev": {
+    "phpspec/phpspec": "^4.0"
+  },
+  "minimum-stability": "stable",
+  "config": {
+    "bin-dir": "bin/"
+  }
+}
