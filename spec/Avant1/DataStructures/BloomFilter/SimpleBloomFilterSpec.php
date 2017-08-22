@@ -4,11 +4,20 @@ namespace spec\Avant1\DataStructures\BloomFilter;
 
 use Avant1\DataStructures\BloomFilter;
 use Avant1\DataStructures\BloomFilter\SimpleBloomFilter;
+use Avant1\DataStructures\HashFunction\MurmurHashFunction;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
 class SimpleBloomFilterSpec extends ObjectBehavior
 {
+
+    private $m = 100;
+
+    function let()
+    {
+        $this->beConstructedWith($this->m, ...[new MurmurHashFunction()]);
+    }
+
     function it_should_be_bloom_filter()
     {
         $this->shouldHaveType(SimpleBloomFilter::class);
@@ -25,6 +34,17 @@ class SimpleBloomFilterSpec extends ObjectBehavior
         $this->add('banana');
 
         $this->exists('banana')->shouldReturn(true);
+    }
+
+    function it_has_collisions()
+    {
+        $this->beConstructedWith($m = 10, ...[new MurmurHashFunction()]);
+
+        $this->add('banana');
+        $this->add('potato');
+        $this->add('carrot');
+
+        $this->exists('tomato!')->shouldReturn(true);
     }
 
 
