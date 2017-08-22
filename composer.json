@@ -3,6 +3,11 @@
   "description": "Bloom filter PHP implementation",
   "type": "library",
   "require": {},
+  "autoload": {
+    "psr-4": {
+      "Avant1\\": "src/Avant1"
+    }
+  },
   "require-dev": {
     "phpspec/phpspec": "^4.0"
   },
