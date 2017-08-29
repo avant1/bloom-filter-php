@@ -1,0 +1,39 @@
+#!/usr/bin/env php
+<?php
+
+use Avant1\DataStructures\BloomFilter\Benchmark\StorageBenchmark;
+use Symfony\Component\Console\Output\OutputInterface;
+
+require_once __DIR__.'/../vendor/autoload.php';
+
+$app = new \Silly\Edition\PhpDi\Application();
+
+ini_set('memory_limit', '1G');
+
+$app->command('benchmark-storage-set storageClassName itemsCount', function (
+	string $storageClassName,
+	int $itemsCount,
+	OutputInterface $output,
+	StorageBenchmark $benchmark
+) {
+
+	//todo allow to pass complete class name as parameter
+	$storageClass = '\Avant1\DataStructures\BloomFilter\Storage\\' . $storageClassName;
+
+	//todo different storages may have different constructor arguments
+	$storage = new $storageClass($itemsCount);
+
+	$benchmarkResult = $benchmark->storeItems($itemsCount, $storage);
+
+	$runtime = sprintf('%.3f', $benchmarkResult->getRuntime());
+	$memoryUsage = number_format($benchmarkResult->getPeakMemoryUsage() / 1024, 1, '.', ' ');
+
+	$printedOutput = <<<TXT
+{$benchmarkResult->getDescription()} took <options=bold>$runtime</>s.
+Peak memory usage: $memoryUsage KB
+TXT;
+
+    $output->writeln($printedOutput);
+});
+
+$app->run();

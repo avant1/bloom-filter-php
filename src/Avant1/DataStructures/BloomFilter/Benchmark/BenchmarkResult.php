@@ -19,4 +19,19 @@ class BenchmarkResult
         $this->runtime = $runtime;
     }
 
+    public function getDescription(): string
+    {
+        return $this->benchmarkDescription;
+    }
+
+    public function getPeakMemoryUsage(): float
+    {
+        return $this->peakMemoryUsage;
+    }
+
+    public function getRuntime(): float
+    {
+        return $this->runtime;
+    }
+
 }

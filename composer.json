@@ -12,7 +12,9 @@
     }
   },
   "require-dev": {
-    "phpspec/phpspec": "^4.0"
+    "phpspec/phpspec": "^4.0",
+    "mnapoli/silly": "^1.6",
+    "mnapoli/silly-php-di": "^1.1"
   },
   "minimum-stability": "stable",
   "config": {
