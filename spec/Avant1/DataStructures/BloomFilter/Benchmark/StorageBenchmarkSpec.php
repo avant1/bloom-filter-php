@@ -28,4 +28,13 @@ class StorageBenchmarkSpec extends ObjectBehavior
         $this->storeItems(10, $storage)->shouldReturnAnInstanceOf(BenchmarkResult::class);
     }
 
+    function it_can_run_items_retreive_benchmark(Stopwatch $stopwatch, Storage $storage)
+    {
+        $stopwatch->measure(Argument::type('callable'))->willReturn(0.5);
+
+        $storage->set(Argument::any())->shouldBeCalledTimes(10);
+
+        $this->retreiveItems(10, 5, $storage)->shouldReturnAnInstanceOf(BenchmarkResult::class);
+    }
+
 }
